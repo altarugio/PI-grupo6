@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 	<title>Simulação</title>
+	<link rel="icon" type="image/x-icon" href="img/logotipo.jpg">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -54,21 +55,49 @@
 	</div>
 <!--FAZER CALCULO DE ENERGIA GASTA PARA X PLACAS-->
 
+<div class="simulacao">
+	<h3>Simule agora o valor a investir e o tempo de retorno</h3><br>
+<label for="Energia">Selecione a média da sua conta de energia </label>
+<select id="Energia">
+  <option value="">--Faça sua simulação--</option>
+  <option value="sunny">Até 100 kWh/mês</option>
+  <option value="rainy">Até 160 kWh/mês</option>
+  <option value="snowing">Até 260 kWh/mês</option>
+  <option value="overcast">Até 380 kWh/mês</option>
+</select>
 
+<p></p>
 
+</div>
+<script>
+var select = document.querySelector('select');
+var para = document.querySelector('p');
 
-<!--OU COLOCAR UMA TABELA DE X ENERGIA GASTA, PRECISA DE Y PLACAS-->
+select.addEventListener('change', setEnergia);
 
+function setEnergia() {
+  var choice = select.value;
 
+  if (choice === 'sunny') {
+	para.textContent = 'Serão necessário "x" placas solares, a média de valor referente a implantação do sistema seria de R$******, retorno em "y" meses.  ';
+  } else if (choice === 'rainy') {
+	para.textContent = 'Serão necessário "x" placas solares, a média de valor referente a implantação do sistema seria de R$******, retorno em "y" meses. ';
+  } else if (choice === 'snowing') {
+	para.textContent = 'Serão necessário "x" placas solares, a média de valor referente a implantação do sistema seria de R$******, retorno em "y" meses. ' ;
+  } else if (choice === 'overcast') {
+	para.textContent = 'Serão necessário "x" placas solares, a média de valor referente a implantação do sistema seria de R$******, retorno em "y" meses.';
+  } else {
+	para.textContent = '';
+  }
+}
 
-
-
-<!--FIM CALCULO DE ENERGIA GASTA PARA X PLACAS-->
+</script>
+<!-- FIM CALCULO DE ENERGIA GASTA PARA X PLACAS -->
 	<div class="container-fluid">
 		<div class="form-contato text-center">
 			<form name="form1" action="enviar.php" method="post">
-				<span id="primeiro_span">Cadastre-se já</span><br>
-				<p>Informe algumas informações sobre você antes.</p>
+				<span id="primeiro_span">Fez sentido para você? </span><br>
+				<p>Preencha o formulário abaixo, que nosso especialista entrará em contato para tirar todas as dúvidas</p>
 
 
 			<input name="nome" type="text" class="input-1" placeholder="Nome completo"><br />
@@ -128,9 +157,7 @@
 </footer>
 <!--FIM FOOTER-->
 
-	<div class="direitos">
-		<h5 class="direitos"> Copyright © BIO LUZ.</h5>
-	</div>
+	
 </div>
 
 	<script src="js.js"></script>

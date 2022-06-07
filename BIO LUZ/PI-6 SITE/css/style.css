@@ -12,7 +12,7 @@
 }
 
 .nav-item a.nav-link:hover{
-	color: yellow !important;
+	color: rgb(67, 228, 18) !important;
 }
 
 .menu {
@@ -360,3 +360,24 @@ div.input-file{
     margin-top: 2%;
     width: 60%;
 }
+
+/* simulacao calculadora de gasto de energia x placas/custo necessario */
+.simulacao{
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+
+@media screen and (min-width: 100px) {
+	body {
+	  background-color: rgb(113, 243, 163);
+	}
+	.logo{
+		margin-left: auto;
+	}
+
+	.navbar-toggler{
+		margin-top: -15%;
+	}
+  }
