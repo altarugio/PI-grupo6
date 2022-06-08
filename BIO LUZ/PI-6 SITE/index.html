@@ -26,11 +26,6 @@
 		<img src="img/logo oficial2.png" alt="some text" width=75 height=60 >
 	    </div>  
 		<div class="container">
-
-			
-			
-			
-
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -41,13 +36,13 @@
 						<a class="nav-link" href="index.html">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pages/Produtos.html">Produtos</a>
+						<a class="nav-link" href="Produtos.html">Produtos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pages/Simulacao.html">Simulação</a>
+						<a class="nav-link" href="Simulacao.html">Simulação</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pages/Sobre.html">Sobre</a>
+						<a class="nav-link" href="Sobre.html">Sobre</a>
 					</li>
 				</ul>
 			</div>
@@ -66,8 +61,8 @@
           <div class="carousel-item active" data-bs-interval="10000">
             <img src="img/1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Para um mundo melhor</h5>
-              <p>Ajudamos a viabilizar o seu sonho, e melhorar o nosso planeta</p>
+              <h1>Para um mundo melhor, te ajudamos a viabilizar o seu sonho, e juntos melhoramos nosso planeta.</h1>
+              
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
@@ -98,9 +93,55 @@
 	<!-- HOME -->
 	<div class="titulo_h">
 		<!-- H1 DA HOME -->
-		<h1>Uma imagem vale mais que mil palavras</h1>
+		<h2>Uma imagem vale mais que mil palavras</h2>
 	</div>
+	<style>
+		body {
+		  background: #2f302f;
+		}
+	  
+		h1, h2 {
+		  max-width: 480px;
+		  text-align: center;
+		  margin: 60px auto;
+		  font-family: 'Courier New', Courier, monospace;
+		  color: #fff;
+		}
+	  
+		h1::after {
+		  content: '|';
+		  opacity: 1;
+		  margin-left: 5px;
+		  display: inline-block;
+		  animation: blink .50s infinite;
+		}
+	  
+		@keyframes blink {
+		  0%, 100% {
+			opacity: 1;
+		  }
+		  50% {
+			opacity: 0;
+		  }
+		}
+	  </style>
+	  
+	 
+	  
+	  <script>
+		function typeWriter(elemento) {
+		  const textoArray = elemento.innerHTML.split('');
+		  elemento.innerHTML = '';
+		  textoArray.forEach((letra, i) => {
+			setTimeout(() => elemento.innerHTML += letra, 75 * i);
+		  });
+		}
+	  
 
+	  
+		const titulo = document.querySelector('h1');
+		typeWriter(titulo);
+	  </script>
 	<div class="flex-container">
 
 		<div class="row" style="margin: 0;">
@@ -128,7 +169,7 @@
 			</div>
 
 			<div class="texto_ col-lg 12 col-md 12 col-sm 12 col-xs 12" style="width: 20rem;height:100%;">
-				Comece a <strong>economizar dinheiro</strong> com a sua conta de energia e mudar o mundo junto com a gente
+			<h2>	Comece a <strong>economizar dinheiro</strong> com a sua conta de energia e mudar o mundo junto com a gente</h2>
 			</div>
 
 		</div>

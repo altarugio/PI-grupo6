@@ -114,7 +114,11 @@ button#button-id:hover{
 button#button-id a{
 	text-decoration: none;
 }
+#primeiro_span{
+	font-size:x-large;
 
+
+}
 input#button-id{
 	background-color: rgb(255, 217, 0);
 	color: black;
@@ -216,7 +220,7 @@ h3.titulo-dois{
 	width: 100%;
 	margin-top: 30px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 .titulos_{
 	font-family: 'Times New Roman', Times, serif;
@@ -322,7 +326,7 @@ div.input-file{
 	    margin-top: 2%;
 			margin-left: 21%;
 	    width: 60%;
-			background-color: red;
+		
 	}
 
 }
